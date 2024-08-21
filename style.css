@@ -12,7 +12,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Open Sans", sans-serif;
-    background-color:#151515;
+    background-color:#1E1E22;
     width: 100vw;
     height: 100vh;
 }
@@ -74,9 +74,22 @@ main{
 .customization{
     height:100vh;
     width:100vw;
-    background-color:blue;
-    
+    background-color:#1E1E22;    
 }
+.customization h1{
+    color:#DDDDE1;
+    font-size:25px;
+    font-weight:bold;
+    margin-top: 5px;
+    margin-left:20px;
+}
+.customization h2{
+    color:#81809E;
+    font-size:15px;
+    margin-left:20px;
+    margin-bottom:20px;
+}
+
 .contener{
     height:30%;
     width:92%;
@@ -119,25 +132,47 @@ main{
 li{
     width: 92%;
     height: 81px;
-    background-color: red;
+    background-color: #202023;
     margin: auto;
     border-radius: 16px;
     margin-top: 30px;
     display: flex;
     align-items:start ;
-    justify-content: start;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-top: 20px;
 }
 ul{
     list-style: none;
 
 }
-li .image{
-    width: 18%;
+.workOutName{
+    color:#DDDDE1;
+    font-size:16PX;
+    font-weight:500;
+}
+.stats{
+    color:#81809E;
+    font-size:15PX;
 
-    border-radius: 16px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+.li div{
+    text-align: center;
+    height: 81px;
+}
+.howTo{
+    margin-top: 0px;
+    margin-right: 25px;
+    background-color: #151515;
+    border: none;
+    padding:10px 20px;
+    font-size: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    color:#7C4DFF;
+}
+a{
+    text-decoration:none;
+    color:#7C4DFF;
 }
