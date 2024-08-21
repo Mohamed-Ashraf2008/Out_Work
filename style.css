@@ -59,37 +59,11 @@ main{
 .home-i, .calendar-i, .customization-i {
     display: block;
 }
-.wrapper{
-    max-height:194px;
-    display:flex;
-    overflow:scroll;
-    width:100%;
-    scroll-behavior:smooth;
-    align-items:end;
-    margin-top:50px;
-}
-.wrapper::-webkit-scrollbar {
-    display: none;
-}
-.wrapper .itams{
-    height:152px;
-    width:144px;
-    margin:0px 10px;
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-    color:white;
-    background-color:#202023;
-    border-radius: 16px;
-    margin-left:16px;
-    min-width:144px;
-    flex-direction:column;
-    padding:0 0 8px 0;
-}
 .home{
     height:100vh;
     width:100vw;
     background-color: #1E1E22;
+    padding-top: 25px;
 }
 .calendar{
     height:100vh;
@@ -102,49 +76,32 @@ main{
     background-color:blue;
     
 }
-.circle .progress {
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
-    background: conic-gradient(#7C4DFF 0%, #7C4DFF 45%, #fff 45%, #fff 315%);
-    box-sizing: border-box;
-    margin: 6px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #7C4DFF;
-    font-size: 14px;
+.contener{
+    height:30%;
+    width:92%;
+    background-color:#7C4DFF ; 
+    margin: auto;
+    border-radius: 16px;
+}
+.start{
+    height: 41px;
+    width: 125px;
+    background-color: #fff;
+    color:#7C4DFF;
+    border: none;
+    border-radius: 12px;
     font-weight: bold;
-}
-
-.progress{
-    width: 60px; 
-    height: 60px;
-    border-radius: 50%;
-    background-color:#202023;;
-    color: #7C4DFF;
     font-size: 14px;
-    font-weight: bold;
-    z-index: 555;
-    
+    position: relative;
+    top:20%;
+    cursor: pointer;
+    margin-left:16px;
 }
-
-.itams .name{
-    font-size:14px;
-    font-weight:bold;
-    color:#DDDDE1;
-}
-.itams .remaining{
-    font-size:12px;
-    color:#81809E;
-} 
 .text{
-    border:2px solid #7C4DFF;
-    padding: 0;
-    display:flex;
-    justify-content: space-between;
-    
-    align-items: center;
-    flex-direction:column;
-    height:60px;
+    font-weight: bolder;
+    font-size: 24px;
+    color:#DDDDE1;
+    width: 200px;
+    margin-left: 16px;
+    margin-bottom: clamp(20px,25%,55px);
 }
