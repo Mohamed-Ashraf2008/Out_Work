@@ -69,7 +69,17 @@ main{
 .calendar{
     height:100vh;
     width:100vw;
-    background-color:red;
+    background: color #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.calendar h1{
+    color:#DDDDE1;
+    font-size:25px;
+    font-weight:bold;
+    margin-top: 5px;
 }
 .customization{
     height:100vh;
