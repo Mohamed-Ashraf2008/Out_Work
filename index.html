@@ -11,7 +11,6 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    
     <div class="signUp page" id="signUp">
         <div class="box">
             <h1 class="text">Start Strong and Set Your Fitness Goals</h1>
@@ -19,14 +18,16 @@
             <input id="pasword" type="password" placeholder="Enter Your Password" required>
             <button class="enterBtn" onclick="sign()">Sign Up</button>
             <a onclick="hasAcc()">Do you already have an account?</a>
+        </div>
     </div>
     <div class="logIn page" id="logIn">
+        <div class="box">
             <h1 class="text">Caming Back Stornger Then Ever</h1>
             <input id="username" type="text" placeholder="Enter Your Email or Username" required value="bootCamp">
             <input id="password" type="password" placeholder="Enter Your Password" required>
             <button class="start" onclick="log()">Log In</button>
             <a onclick="hasNoAcc()">Dont you have an account?</a>
-            <h1 class="mas"></h1>
+            <h1 class="mas" style="font-size: 15px; color:red;"></h1>
         </div>
     </div>
     <div class="home page">
@@ -38,7 +39,7 @@
             <h1>Categories</h1>
             <ul id="workOutList">
                 <li>
-                    <div><h1 class="workOutName">Chest</h1>
+                    <div><h2 class="workOutName">Chest</h2>
                     <h2 class="stats">3 sets of 10 reps</h2>
                     </div>
                     <div>
@@ -50,6 +51,16 @@
     </div>
     <div class="customization page">
     </div>
+    <div class="calendar page">
+        <h1 class="person">Mohamed Ashraf</h1>
+        <h2 class="jop">Web Developer</h2>
+        <hr style="background-color: blueviolet;">
+        <h1 class="person">Jeuovany Mokhtar</h1>
+        <h2 class="jop">PowerPoint Developer and Presenter</h2>
+        <hr>
+        <h1 class="person">Abdelrahman Ayman</h1>
+        <h2 class="jop">Tester and Reviewer</h2>
+    </div>
     <nav class="nav">
         <a id="home-link" onclick="activate('home')" class="nav-link">
             <img src="imgs/home-active.png" alt="home" class="home-a">
@@ -57,7 +68,7 @@
         </a>
         <a id="calendar-link" onclick="activate('calendar')" class="nav-link">
             <img src="imgs/calendar-active.png" alt="calendar" class="calendar-a">
-            <img src="imgs/calendar-inactive.png" alt="calendar" class="calendar-i">
+            <img src="imgs/calendar-inactive.png" alt="calendar" class="calendar-i" style="display: none;">
         </a>
         <a id="customization-link" onclick="activate('customization')" class="nav-link">
             <img src="imgs/customization-active.png" alt="customization" class="customization-a">

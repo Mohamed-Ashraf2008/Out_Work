@@ -78,6 +78,7 @@ main{
     justify-content: center;
     align-items: center;
     text-align: center;
+    display:none;
 }
 .calendar h1{
     color:#DDDDE1;
@@ -105,7 +106,7 @@ main{
 }
 
 .contener{
-    height:30%;
+    height:40%;
     width:92%;
     background-color:#7C4DFF ; 
     margin: auto;
@@ -156,7 +157,8 @@ li{
     align-items:start ;
     justify-content: space-between;
     flex-direction: row;
-    padding-left: 10%;
+    padding-left:5%;
+    padding-right:5%;
     padding-top: 20px;
 }
 ul{
@@ -165,12 +167,13 @@ ul{
 }
 .workOutName{
     color:#DDDDE1;
-    font-size:16PX;
-    font-weight:500;
+    font-size:2vh;
+    font-weight:400;
+    
 }
 .stats{
     color:#81809E;
-    font-size:15PX;
+    font-size:1vw;
 
 }
 .li div{
@@ -179,7 +182,6 @@ ul{
 }
 .howTo{
     margin-top: 0px;
-    margin-right: 25px;
     background-color: #151515;
     border: none;
     padding:10px 20px;
