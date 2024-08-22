@@ -5,8 +5,11 @@ let workOuts = {
     shoulders:[{name:"shourlder press", sets:3,reps:12},{name:"front raises", sets:3,reps:12},{name:"rear delt raises", sets:3,reps:12},{name:"shrugs",sets:3,reps:12},{name:"front lateral raises",sets:3,reps:12},{name:"seated lateral shoudler raises",sets:3,reps:12}],
     arms:[{name:"bicep curl",sets:3 ,reps:12 },{name:"21's",sets:3,reps:7},{name:"rope curls", sets:2,reps:15},{name:"tricep pushdown var",sets:3,reps:12},{name:"rope tricep pushdown",sets:2,reps:15},{name:"cable kickbacks", sets:3,reps:12}]
 }
-document.addEventListener('DOMContentLoaded', ()=>
-    {activate('home')})
+let logInEl = document.getElementById("logIn");
+let navEl = document.querySelector(".nav")
+let mas = document.querySelector(".mas")
+let customizationEl = document.querySelector(".customization")
+
 function activate(activeId) {
     // List of all possible links
     const links = ['home', 'calendar', 'customization'];
@@ -29,8 +32,48 @@ function activate(activeId) {
         }
     });
 }
+function sign() {
+    const signEl = document.getElementById("signUp");
+    if (signEl) {
+        // Toggle visibility by adding/removing the class
+        signEl.classList.toggle("signUpCl");
+        activate("home");
+        navEl.classList.toggle("navOp");
+    }
+}
+function hasAcc(){
+    const signEl = document.getElementById("signUp");
+    if (signEl) {
+        // Toggle visibility by adding/removing the class
+        signEl.classList.toggle("signUpCl");
+        logInEl.classList.toggle("logInOP");
+    }
+}
+function hasNoAcc(){
+    const signEl = document.getElementById("logInEl");
+    signEl.style.display("flex")
+    logInEl.style.display("none")
+}
+function log(){
+    const logEl = document.getElementById("logIn");
+    let username = document.getElementById('username')
+    let password = document.getElementById('password')
+    if (username.value == "bootCamp" && password.value == "mrMApro0") {
+        // Toggle visibility by adding/removing the class
+        logEl.style.display="none"
+        navEl.classList.toggle("navOp");
 
+        activate("home");
+        customizationEl.innerHTML=`
+        <h1>User Name: ${username.value}</h1>
+        <h2>Password: ${password.value}</h2>
+        `
+    }
+    else{
+        mas.textContent = username.value
+    }
+}
 // Optional: Set the initial state if needed
-activate('home'); // Example to set 'home' as the initial active ico
+// Example to set 'home' as the initial active ico
 
  
