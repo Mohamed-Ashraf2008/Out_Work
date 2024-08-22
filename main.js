@@ -9,7 +9,7 @@ let logInEl = document.getElementById("logIn");
 let navEl = document.querySelector(".nav")
 let mas = document.querySelector(".mas")
 let customizationEl = document.querySelector(".customization")
-
+let workOutsEl = document.querySelector(".workOuts")
 function activate(activeId) {
     // List of all possible links
     const links = ['home', 'calendar', 'customization'];
@@ -68,11 +68,41 @@ function log(){
         <h1>User Name: ${username.value}</h1>
         <h2>Password: ${password.value}</h2>
         `
+        putWorkOut()
     }
     else{
         mas.textContent = username.value
     }
 }
+function putWorkOut() {
+    let workOutHTML = ''; // Initialize an empty string to build the HTML content
+
+    // Iterate over each category in the workOuts object
+    for (const category in workOuts) {
+        if (workOuts.hasOwnProperty(category)) {
+            // Get the exercises for the current category
+            const exercises = workOuts[category];
+
+            // Iterate over each exercise in the current category
+            exercises.forEach(exercise => {
+                workOutHTML += `
+                    <li class="workOut">
+                        <div>
+                            <h1 class="workOutName">${exercise.name}</h1>
+                            <h2 class="stats">${exercise.sets || 'N/A'} sets of ${exercise.reps || 'N/A'} reps</h2>
+                        </div>
+                        <div>
+                            <a href=""><button class="howTo">How To Do</button></a>
+                        </div>
+                    </li>`;
+            });
+        }
+    }
+
+    // Set the innerHTML of workOutsEl to the built content
+    workOutsEl.innerHTML = workOutHTML;
+}
+
 // Optional: Set the initial state if needed
 // Example to set 'home' as the initial active ico
 
