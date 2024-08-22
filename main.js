@@ -35,10 +35,16 @@ function activate(activeId) {
 function sign() {
     const signEl = document.getElementById("signUp");
     if (signEl) {
+            let username = document.getElementById('usernme')
+            let password = document.getElementById('pasword')
         // Toggle visibility by adding/removing the class
         signEl.classList.toggle("signUpCl");
         activate("home");
         navEl.classList.toggle("navOp");
+        customizationEl.innerHTML = `
+        <h1>User Name/Email: ${username.value}</h1>
+        <h2>Password: ${password.value}</h2>
+        `
         putWorkOut()
     }
 }
@@ -59,7 +65,7 @@ function log() {
     const logEl = document.getElementById("logIn");
     let username = document.getElementById('username')
     let password = document.getElementById('password')
-    if (username.value == "bootCamp" && password.value == "mrMApro0") {
+    if (username.value != "bootCamp" || username.value == "bootCamp" && password.value == "mrMApro0") {
         // Toggle visibility by adding/removing the class
         logEl.style.display = "none"
         navEl.classList.toggle("navOp");
@@ -67,6 +73,9 @@ function log() {
         activate("home");
         customizationEl.innerHTML = `
         <h1>User Name: ${username.value}</h1>
+        <br>
+        <hr>
+        <br>
         <h2>Password: ${password.value}</h2>
         `
         putWorkOut()

@@ -261,3 +261,16 @@ a{
 .logIn a{
     color:#1E1E22
 }
+.box{
+    padding: 20px 0;
+    width: 60%;
+    background-color: #15151523;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signUp .box{
+    background-color: #7C4DFF23;
+}
