@@ -5,11 +5,13 @@ let workOuts = {
     shoulders: [{ name: "shourlder press", sets: 3, reps: 12,link:"https://youtu.be/WvLMauqrnK8"}, { name: "front raises", sets: 3, reps: 12,link:"https://youtu.be/hRJ6tR5-if0"}, { name: "rear delt raises", sets: 3, reps: 12,link:"https://youtu.be/p1yQnTNE808" }, { name: "shrugs", sets: 3, reps: 12, link:"https://youtu.be/_t3lrPI6Ns4"}, { name: "front lateral raises", sets: 3, reps: 12,link:"https://youtu.be/hRJ6tR5-if0"}, { name: "seated lateral shoudler raises", sets: 3, reps: 12, link:"https://youtu.be/xDrYB81QXmY"}],
     arms: [{ name: "bicep curl", sets: 3, reps: 12,link:"https://youtu.be/ykJmrZ5v0Oo"}, { name: "21's", sets: 3, reps: 7,link:"https://youtu.be/qf6KO7qKFRI" }, { name: "rope curls", sets: 2, reps: 15,link:"https://youtu.be/2CDKTFFp5fA" }, { name: "tricep pushdown var", sets: 3, reps: 12,link:"https://youtu.be/LXkCrxn3caQ" }, { name: "cable kickbacks", sets: 3, reps: 12 ,link:"https://youtu.be/ifP5sFBT7IE"}]
 }
+let exercise = document.querySelector(".exercise")
 let logInEl = document.getElementById("logIn");
 let navEl = document.querySelector(".nav")
 let mas = document.querySelector(".mas")
 let customizationEl = document.querySelector(".customization")
 let workOutsEl = document.querySelector(".workOuts")
+let homeEl = document.querySelector(".home")
 function activate(activeId) {
     // List of all possible links
     const links = ['home', 'customization'];
@@ -34,7 +36,7 @@ function activate(activeId) {
 }
 function sign() {
     const signEl = document.getElementById("signUp");
-    if (signEl) {
+    if (username.value != "" && pasword.value != "") {
         // Toggle visibility by adding/removing the class
         signEl.classList.toggle("signUpCl");
         activate("home");
@@ -103,6 +105,58 @@ function putWorkOut() {
     // Set the innerHTML of workOutsEl to the built content
     workOutsEl.innerHTML = workOutHTML;
 }
+function start() {
+    exercise.style.display = "flex"    
+    homeEl.style.display="none"
+}
+function displayWorkouts(category) {
+    const categoryEl = document.querySelector(`.${category}P`);
+    let workoutsHTML = ''; // Initialize an empty string to build the HTML content
 
-// Optional: Set the initial state if needed
-// Example to set 'home' as the initial active ico
+    // Get the exercises for the specified category
+    const exercises = workOuts[category];
+
+    // Iterate over each exercise in the specified category
+    exercises.forEach(exercise => {
+        workoutsHTML += `
+            <li class="workOut">
+                <div>
+                    <h1 class="workOutName">${exercise.name}</h1>
+                    <h2 class="stats">${exercise.sets || 'N/A'} sets of ${exercise.reps || 'N/A'} reps</h2>
+                </div>
+                <div>
+                    <a href="${exercise.link}"><button class="howTo">How To Do</button></a>
+                </div>
+            </li>`;
+    });
+
+    // Set the innerHTML of categoryEl to the built content
+    categoryEl.innerHTML = workoutsHTML;
+}
+
+function showCategory(category) {
+    displayWorkouts(category);
+    let categoryEl = document.querySelector(`.${category}P`);
+    categoryEl.style.display = "flex";
+    exercise.style.display = "none";
+}
+
+function chest() {
+    showCategory('chest');
+}
+
+function back() {
+    showCategory('back');
+}
+
+function legs() {
+    showCategory('legs');
+}
+
+function shoulders() {
+    showCategory('shoulders');
+}
+
+function arms() {
+    showCategory('arms');
+}
