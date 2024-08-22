@@ -217,27 +217,43 @@ a{
 }
 .signUp h1 , .logIn h1{
     color:#DDDDE1;
-    font-size:50px;
+    font-size:5vw;
     font-weight:bold;
     margin-top: 5px;
     text-align: center;
     width: 70%;
 }
 input{
-    width:40%;
+    width:70%;
     display:block;
     height: 40px;
     border: none;
     border-radius: 15px;
     margin-bottom: 50px;
     padding-left: 25px;
+    border: #303134 solid 5px;
+    background-color: #555;
+    color: #DDDDE1;
 }
 input::placeholder{
     color:#81809E;
-    font-size:15px;
+    font-size:10px;
 }
 .signUp button , .logIn button{
-    margin-top: 50px;
+    margin-top: 10px;
+    height: 31px;
+    width: 60%;
+    background-color: #7C4DFF;
+    color:#1E1E22;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.logIn button{
+    background-color: #1E1E22;
+    color: #7C4DFF;
 }
 a{
     text-decoration: underline;

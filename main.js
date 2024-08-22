@@ -72,7 +72,7 @@ function log(){
         putWorkOut()
     }
     else{
-        mas.textContent = username.value
+        mas.textContent = "Wrong Username or Password"
     }
 }
 function putWorkOut() {
