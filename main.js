@@ -39,6 +39,7 @@ function sign() {
         signEl.classList.toggle("signUpCl");
         activate("home");
         navEl.classList.toggle("navOp");
+        putWorkOut()
     }
 }
 function hasAcc(){
