@@ -240,7 +240,7 @@ input{
 }
 input::placeholder{
     color:#81809E;
-    font-size:10px;
+    font-size:15px;
 }
 .signUp button , .logIn button{
     margin-top: 10px;
@@ -260,6 +260,7 @@ input::placeholder{
 }
 a{
     text-decoration: underline;
+    font-size: 100%;
 }
 .logIn a{
     color:#1E1E22
@@ -304,5 +305,6 @@ a{
     justify-content: center;
     align-items: space-around;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
 }
