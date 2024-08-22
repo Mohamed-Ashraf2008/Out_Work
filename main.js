@@ -42,6 +42,10 @@ function sign() {
         activate("home");
         navEl.classList.toggle("navOp");
         putWorkOut()
+        customizationEl.innerHTML = `
+        <h1>User Name: ${username.value}</h1>
+        <h2>Password: ${pasword.value}</h2>
+        `
     }
 }
 function hasAcc() {
